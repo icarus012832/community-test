@@ -10,14 +10,14 @@ import { User } from './users/user.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql', // 또는 사용 중인 데이터베이스 유형
+      type: 'mysql',
       host: 'localhost',
       port: 3306,
       username: 'root',
       password: '12345678',
       database: 'bullet',
       entities: [User],
-      synchronize: true, // 개발 환경에서만 사용, 프로덕션에서는 false로 설정
+      synchronize: true, 
     }),
     UsersModule,
     AuthModule,
