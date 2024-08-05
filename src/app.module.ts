@@ -6,6 +6,8 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { BoardsModule } from './boards/boards.module';
 import { User } from './users/user.entity';
+import { Board } from './boards/board.entity';
+import { Post } from './boards/post.entity';
 
 @Module({
   imports: [
@@ -16,7 +18,7 @@ import { User } from './users/user.entity';
       username: 'root',
       password: '12345678',
       database: 'bullet',
-      entities: [User],
+      entities: [User, Board, Post],
       synchronize: true, 
     }),
     UsersModule,
